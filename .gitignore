@@ -1,0 +1,27 @@
+# deps
+node_modules/
+
+# build
+dist/
+.astro/
+playwright-report/
+test-results/
+
+# env / local
+.env
+.env.*
+!.env.example
+
+# logs / OS
+*.log
+.DS_Store
+Thumbs.db
+
+# editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# package managers (pnpm only)
+package-lock.json
+yarn.lock

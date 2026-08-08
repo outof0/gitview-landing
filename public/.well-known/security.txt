@@ -1,0 +1,5 @@
+Contact: mailto:hello.outof0@gmail.com
+Expires: 2027-08-08T23:59:59Z
+Preferred-Languages: en, vi
+Canonical: https://gitview.dev/.well-known/security.txt
+Policy: https://github.com/outof0/gitview-landing/security/policy
