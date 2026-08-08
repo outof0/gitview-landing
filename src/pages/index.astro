@@ -1,0 +1,80 @@
+---
+import "@fontsource-variable/inter-tight";
+import "@fontsource/ibm-plex-mono/400.css";
+import "@fontsource/ibm-plex-mono/500.css";
+import { App } from "../App";
+import { SITE } from "../site";
+import "../index.css";
+
+const description =
+  `Resolve Git conflicts in a true three-pane editor. Explore history, branches, changes and diffs in VS Code. Download GitView v${SITE.version} free — MIT, no account, no telemetry.`;
+const socialDescription =
+  `True 3-way merge and a complete Git workspace for VS Code. Download GitView v${SITE.version} free — MIT licensed and open source.`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "GitView",
+  url: "https://gitview.dev/",
+  softwareVersion: SITE.version,
+  downloadUrl: SITE.downloadUrl,
+  applicationCategory: "DeveloperApplication",
+  operatingSystem: "Windows, macOS, Linux",
+  softwareRequirements: "VS Code 1.85+ and Git on PATH",
+  description:
+    "See Git clearly. 3-way merge, history, branches, changes and diffs for VS Code and compatible editors.",
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "USD",
+  },
+  author: {
+    "@type": "Person",
+    name: "OutOf0",
+    email: "hello.outof0@gmail.com",
+    url: "https://github.com/outof0",
+  },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#0F1115" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32.png" />
+    <link rel="apple-touch-icon" href="/icons/app-icon-256.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://gitview.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GitView — 3-way merge for VS Code" />
+    <meta property="og:description" content={socialDescription} />
+    <meta property="og:site_name" content="GitView" />
+    <meta property="og:url" content="https://gitview.dev/" />
+    <meta property="og:image" content="https://gitview.dev/og.png" />
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:image:alt" content="GitView three-way merge interface" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GitView — 3-way merge for VS Code" />
+    <meta name="twitter:description" content={socialDescription} />
+    <meta name="twitter:image" content="https://gitview.dev/og.png" />
+    <meta name="twitter:image:alt" content="GitView three-way merge interface" />
+
+    <title>GitView — 3-way merge for VS Code</title>
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(structuredData)}
+    />
+  </head>
+  <body>
+    <App client:load />
+  </body>
+</html>
